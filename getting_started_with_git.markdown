@@ -200,8 +200,11 @@ git diff --cached
     - third party libraries
 
 ---
-# Exercise - Add .javac files to your .gitignore
-* Modify your .gitignore to tell git to ignore \*.javac files
+`
+# Exercise - Add .javac files to your .gitignore more here
+<br />
+
+* ModifyChangeeeee your .gitignore to tell git to ignore \*.javac files
 * Create a file called prog.javac
 * Use git status to see that it is correctly ignored
 * .gitignore must be under version control also - Add it to staging and commit
@@ -241,7 +244,7 @@ git reset HEAD --hard
 * Both can be worked on without affecting the other
 * Branches are pointers to revisions
 
-![branches](images/branches.png)
+![branches](getting_started_with_git/images/branches.png)
 
 ---
 # Creating a branch
@@ -286,7 +289,7 @@ git checkout new-secret-feature
 git merge bug-fix-12345
 `
 
-![branches](images/merged.png)
+![branches](getting_started_with_git/images/merged.png)
 
 ---
 # Deleting a branch
@@ -314,7 +317,7 @@ git branch -D <branchname>
 * No merge commits left in the history
 * Outside the scope of this presentation
 
-![rebase](images/rebase.png)
+![rebase](getting_started_with_git/images/rebase.png)
 
 ---
 # Exercise - Branching & Merging
