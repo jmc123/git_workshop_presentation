@@ -116,13 +116,14 @@ Some useful commit options:
 ---
 # Exercise - Git Lifecycle
 ## Run `git status` after each of these steps
-* From the project you cloned open up pom.xml in the editor of your choice 
+* From the project you cloned, open up pom.xml in the editor of your choice 
 * Edit a few lines 
 * Add the file to the staging area
 * Commit the file
 * View your history
 
 ---
+
 # Viewing the changes to your tracked files
 ## [git diff](http://git-scm.com/docs/git-diff)
 You will want to view the changes you have made before you commit
@@ -140,28 +141,19 @@ git diff --cached
 `
 
 ---
-# The GUI friendly way
-* Now the *'easy'* way!
-* There are many graphical tools for managing your git repositories
-* My suggestions:
-    - gitg : git GUI client (Built for GNOME but works everywhere)
-    - tig : A ncurses based client
-    - \_\_git\_ps1: Installed with git-core
-* An extensive list can be found [here](https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Graphical_Interfaces)
 
----
 # Exercise - Viewing changes to your repo
 * Make some changes to the file(s) in your repo
 * Create a new file
 * View the diff for your working directory and staging area
 * Add the new file and the changes to your existing file(s) to your staging area
 * View the diff of your working directoy and staging area
-* Install gitg and use the GUI to view the repository
-* Commit your changes (You can use gitg or the command line interface)
+* Commit your changes
 
 ***Note***: During all of the above steps make lots of use of the *git status* command. It is very helpful for letting you know what is happening in your repo
 
 ---
+
 # Ignoring files via .gitignore
 * The gitignore file allows you to tell git to ignore certain files and not list them in your status output
 * This is useful when you are building artifacts in the working directory that you don't want to be commited
@@ -169,16 +161,6 @@ git diff --cached
     - compiled files
     - binary executables
     - third party libraries
-
----
-`
-# Exercise - Add .javac files to your .gitignore more here
-<br />
-
-* ModifyChangeeeee your .gitignore to tell git to ignore \*.javac files
-* Create a file called prog.javac
-* Use git status to see that it is correctly ignored
-* .gitignore must be under version control also - Add it to staging and commit
 
 ---
 # Reverting changes to the working directory
