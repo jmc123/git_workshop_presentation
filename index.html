@@ -25,7 +25,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Getting Started With git</title>
+    <title>Getting Started With Git - 02/03/2015</title>
     <!-- Styles -->
     
     <link rel="stylesheet" media="print" href="getting_started_with_git\theme\css\print.css">
@@ -54,7 +54,7 @@
         <div class="slide slide-1">
           <div class="inner">
             
-            <header><h1>Getting Started With git</h1></header>
+            <header><h1>Getting Started With Git - 02/03/2015</h1></header>
             
             
           </div>
@@ -71,7 +71,7 @@
             </aside>
             
             <aside class="page_number">
-              1/37
+              1/35
             </aside>
           </footer>
         </div>
@@ -82,15 +82,14 @@
         <div class="slide slide-2">
           <div class="inner">
             
-            <header><h1>What is git?</h1></header>
+            <header><h1>Installation</h1></header>
             
             
             <section><ul>
-<li>git is a Decentralised Version Control System</li>
-<li>Not necessary to have one central server</li>
-<li>You can make changes to the code and commit them even if you don't have access to a central server</li>
-<li>You only push these changes to other people when you want to</li>
-<li>You can view the history (and compare the files at different revisions) without needing access to a central server</li>
+<li>Click the Git.exe in your downloads folder</li>
+<li>Choose the default options. Apart from...
+<img alt="setup" src="getting_started_with_git/images/Untitled.png" /></li>
+<li>Setup configuration with handout</li>
 </ul></section>
             
           </div>
@@ -107,7 +106,7 @@
             </aside>
             
             <aside class="page_number">
-              2/37
+              2/35
             </aside>
           </footer>
         </div>
@@ -118,13 +117,10 @@
         <div class="slide slide-3">
           <div class="inner">
             
-            <header><h1>Installing git on Linux</h1></header>
+            <header><h1>Clearcase vs Git</h1></header>
             
             
-            <section><p>On Debian based systems:</p>
-<p><code>sudo apt-get install git</code></p>
-<p>On RedHat based systems:</p>
-<p><code>sudo yum install git</code></p></section>
+            <section><p><img alt="setup" src="getting_started_with_git/images/gitvscc.png" /></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -140,7 +136,7 @@
             </aside>
             
             <aside class="page_number">
-              3/37
+              3/35
             </aside>
           </footer>
         </div>
@@ -151,18 +147,14 @@
         <div class="slide slide-4">
           <div class="inner">
             
-            <header><h1>Configuring your git user profile</h1></header>
+            <header><h1>Differences between the two</h1></header>
             
             
-            <section><p>Git must be configured so that your commits carry your information</p>
-<p><code>git config --global user.email "johndoe@example.com"
-git config --global user.name "John Doe"</code></p>
-<p>Pick your favourite terminal based editor (if you don't know what your favourite is then gedit is probably your best bet)</p>
-<p>Other options are vim, emacs, pico, nano...</p>
-<p><code>git config --global core.editor gedit</code></p>
-<p>Let's make things pretty!</p>
-<p><code>git config --global color.ui true</code></p>
-<p><strong><em>Note</em></strong>: You can also edit the <a href="http://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration">configuration file</a> directly if you wish. It is located at ~/.gitconfig</p></section>
+            <section><ul>
+<li>Each Git clone is a replica of the central repository</li>
+<li>Git has no checkin command and checkout command is not what it means in Clearcase</li>
+<li>There are no view and no config specs</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -178,7 +170,7 @@ git config --global user.name "John Doe"</code></p>
             </aside>
             
             <aside class="page_number">
-              4/37
+              4/35
             </aside>
           </footer>
         </div>
@@ -189,8 +181,15 @@ git config --global user.name "John Doe"</code></p>
         <div class="slide slide-5">
           <div class="inner">
             
-            <header><h1>Exercise - Set up your profile using git config</h1></header>
+            <header><h1>Cloning an Existing Repository</h1></header>
             
+            
+            <section><ul>
+<li>Use
+<code>git clone [url]</code>
+command to copy an existing Git repository from the server.</li>
+<li>This is a one time operation.</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -206,7 +205,7 @@ git config --global user.name "John Doe"</code></p>
             </aside>
             
             <aside class="page_number">
-              5/37
+              5/35
             </aside>
           </footer>
         </div>
@@ -217,16 +216,17 @@ git config --global user.name "John Doe"</code></p>
         <div class="slide slide-6">
           <div class="inner">
             
-            <header><h1>Creating a repository</h1></header>
+            <header><h1>Exercise - Clone down a repository</h1></header>
             
             
-            <section><h2><a href="http://git-scm.com/docs/git-init">git init</a></h2>
-<p>Before you write any code you will need to create a repository</p>
-<p><code>mkdir my-repo
-cd my-repo
-git init</code></p>
-<p>This creates the hidden .git folder which git needs to keep track of the state of the repository.</p>
-<p><strong><em>Note</em></strong>: You <em>normally</em> shouldn't have to touch these files. Doing so can corrupt your repository</p></section>
+            <section><ul>
+<li>Go to https://gerrit.ericsson.se  - Ericsson's Git server</li>
+<li>In the top left click Projects -&gt; List</li>
+<li>Type in <code>cm-sync-node</code> and click on the 2nd project</li>
+<li>Copy the git clone command</li>
+<li>In Git bash paste it in - you'll need to click on the border icon</li>
+<li>cd into project</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -242,7 +242,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              6/37
+              6/35
             </aside>
           </footer>
         </div>
@@ -282,7 +282,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              7/37
+              7/35
             </aside>
           </footer>
         </div>
@@ -297,12 +297,12 @@ git init</code></p>
             
             
             <section><ul>
-<li>git is slightly different from most other version control systems in that it has a staging area</li>
+<li>What makes Git unique is its concept of a staging area</li>
 <li>The staging area is a temporary area to store your work before committing it</li>
 <li>It allows you to structure your commits in a way that suits you best</li>
 </ul>
 <h2>A commit lifecycle</h2>
-<p>Locally Modified File(s) --&gt; Staging Area --&gt; Committed</p></section>
+<p><img alt="setup" src="getting_started_with_git/images/git_file_stages.png" /></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -318,7 +318,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              8/37
+              8/35
             </aside>
           </footer>
         </div>
@@ -354,7 +354,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              9/37
+              9/35
             </aside>
           </footer>
         </div>
@@ -393,7 +393,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              10/37
+              10/35
             </aside>
           </footer>
         </div>
@@ -431,7 +431,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              11/37
+              11/35
             </aside>
           </footer>
         </div>
@@ -442,12 +442,13 @@ git init</code></p>
         <div class="slide slide-12">
           <div class="inner">
             
-            <header><h1>Exercise - Start a repository</h1></header>
+            <header><h1>Exercise - Git Lifecycle</h1></header>
             
             
-            <section><ul>
-<li>Initialise a repository</li>
-<li>Create a text file within</li>
+            <section><h2>Run <code>git status</code> after each of these steps</h2>
+<ul>
+<li>From the project you cloned open up pom.xml in the editor of your choice </li>
+<li>Edit a few lines </li>
 <li>Add the file to the staging area</li>
 <li>Commit the file</li>
 <li>View your history</li>
@@ -467,7 +468,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              12/37
+              12/35
             </aside>
           </footer>
         </div>
@@ -506,7 +507,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              13/37
+              13/35
             </aside>
           </footer>
         </div>
@@ -546,7 +547,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              14/37
+              14/35
             </aside>
           </footer>
         </div>
@@ -585,7 +586,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              15/37
+              15/35
             </aside>
           </footer>
         </div>
@@ -624,7 +625,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              16/37
+              16/35
             </aside>
           </footer>
         </div>
@@ -660,7 +661,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              17/37
+              17/35
             </aside>
           </footer>
         </div>
@@ -693,7 +694,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              18/37
+              18/35
             </aside>
           </footer>
         </div>
@@ -728,7 +729,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              19/37
+              19/35
             </aside>
           </footer>
         </div>
@@ -764,7 +765,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              20/37
+              20/35
             </aside>
           </footer>
         </div>
@@ -801,7 +802,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              21/37
+              21/35
             </aside>
           </footer>
         </div>
@@ -837,7 +838,7 @@ git init</code></p>
             </aside>
             
             <aside class="page_number">
-              22/37
+              22/35
             </aside>
           </footer>
         </div>
@@ -873,7 +874,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              23/37
+              23/35
             </aside>
           </footer>
         </div>
@@ -911,7 +912,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              24/37
+              24/35
             </aside>
           </footer>
         </div>
@@ -947,7 +948,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              25/37
+              25/35
             </aside>
           </footer>
         </div>
@@ -985,7 +986,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              26/37
+              26/35
             </aside>
           </footer>
         </div>
@@ -1019,7 +1020,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              27/37
+              27/35
             </aside>
           </footer>
         </div>
@@ -1053,7 +1054,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              28/37
+              28/35
             </aside>
           </footer>
         </div>
@@ -1092,7 +1093,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              29/37
+              29/35
             </aside>
           </footer>
         </div>
@@ -1126,7 +1127,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              30/37
+              30/35
             </aside>
           </footer>
         </div>
@@ -1135,80 +1136,6 @@ git merge bug-fix-12345</code></p>
       <!-- slide source: getting_started_with_git.markdown -->
       <div class="slide-wrapper">
         <div class="slide slide-31">
-          <div class="inner">
-            
-            <header><h1>ssh keys</h1></header>
-            
-            
-            <section><ul>
-<li>ssh keys are a way of authenicating automatically with a server running a sshd service</li>
-<li>You will need an ssh key to push changes to your github repositories</li>
-<li>Creating an ssh key</li>
-</ul>
-<p><code>ssh-keygen</code></p>
-<ul>
-<li>Viewing the public part of your ssh key</li>
-</ul>
-<p><code>cat ~/.ssh/id_rsa.pub</code></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="getting_started_with_git.markdown">getting_started_with_git.markdown</a>
-            </aside>
-            
-            <aside class="page_number">
-              31/37
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: getting_started_with_git.markdown -->
-      <div class="slide-wrapper">
-        <div class="slide slide-32">
-          <div class="inner">
-            
-            <header><h1>Exercise - Create a repository on github</h1></header>
-            
-            
-            <section><ul>
-<li>Create a github account</li>
-<li>Add your ssh key in the Account Setting -&gt; SSH Keys pages</li>
-<li>Create a repository</li>
-<li>DO NOT check the box for initialising the repo. You will be pushing the repository you created in the previous exercises</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="getting_started_with_git.markdown">getting_started_with_git.markdown</a>
-            </aside>
-            
-            <aside class="page_number">
-              32/37
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: getting_started_with_git.markdown -->
-      <div class="slide-wrapper">
-        <div class="slide slide-33">
           <div class="inner">
             
             <header><h1>Pushing to a remote repository</h1></header>
@@ -1237,7 +1164,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              33/37
+              31/35
             </aside>
           </footer>
         </div>
@@ -1245,7 +1172,7 @@ git merge bug-fix-12345</code></p>
       
       <!-- slide source: getting_started_with_git.markdown -->
       <div class="slide-wrapper">
-        <div class="slide slide-34">
+        <div class="slide slide-32">
           <div class="inner">
             
             <header><h1>Exercise - Push to your github repo</h1></header>
@@ -1271,7 +1198,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              34/37
+              32/35
             </aside>
           </footer>
         </div>
@@ -1279,7 +1206,7 @@ git merge bug-fix-12345</code></p>
       
       <!-- slide source: getting_started_with_git.markdown -->
       <div class="slide-wrapper">
-        <div class="slide slide-35">
+        <div class="slide slide-33">
           <div class="inner">
             
             <header><h1>Pulling Updates</h1></header>
@@ -1306,7 +1233,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              35/37
+              33/35
             </aside>
           </footer>
         </div>
@@ -1314,7 +1241,7 @@ git merge bug-fix-12345</code></p>
       
       <!-- slide source: getting_started_with_git.markdown -->
       <div class="slide-wrapper">
-        <div class="slide slide-36">
+        <div class="slide slide-34">
           <div class="inner">
             
             <header><h1>Exercise - Collaboration on github</h1></header>
@@ -1349,7 +1276,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              36/37
+              34/35
             </aside>
           </footer>
         </div>
@@ -1357,7 +1284,7 @@ git merge bug-fix-12345</code></p>
       
       <!-- slide source: getting_started_with_git.markdown -->
       <div class="slide-wrapper">
-        <div class="slide slide-37">
+        <div class="slide slide-35">
           <div class="inner">
             
             <header><h1>Questions??</h1></header>
@@ -1379,7 +1306,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              37/37
+              35/35
             </aside>
           </footer>
         </div>
@@ -1394,37 +1321,37 @@ git merge bug-fix-12345</code></p>
       <caption>Table of Contents</caption>
       
       <tr id="toc-row-1">
-        <th><a href="#slide1">Getting Started With git</a></th>
+        <th><a href="#slide1">Getting Started With Git - 02/03/2015</a></th>
         <td><a href="#slide1">1</a></td>
       </tr>
       
       
       <tr id="toc-row-2">
-        <th><a href="#slide2">What is git?</a></th>
+        <th><a href="#slide2">Installation</a></th>
         <td><a href="#slide2">2</a></td>
       </tr>
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Installing git on Linux</a></th>
+        <th><a href="#slide3">Clearcase vs Git</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Configuring your git user profile</a></th>
+        <th><a href="#slide4">Differences between the two</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Exercise - Set up your profile using git config</a></th>
+        <th><a href="#slide5">Cloning an Existing Repository</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Creating a repository</a></th>
+        <th><a href="#slide6">Exercise - Clone down a repository</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
@@ -1460,7 +1387,7 @@ git merge bug-fix-12345</code></p>
       
       
       <tr id="toc-row-12">
-        <th><a href="#slide12">Exercise - Start a repository</a></th>
+        <th><a href="#slide12">Exercise - Git Lifecycle</a></th>
         <td><a href="#slide12">12</a></td>
       </tr>
       
@@ -1574,44 +1501,32 @@ git merge bug-fix-12345</code></p>
       
       
       <tr id="toc-row-31">
-        <th><a href="#slide31">ssh keys</a></th>
+        <th><a href="#slide31">Pushing to a remote repository</a></th>
         <td><a href="#slide31">31</a></td>
       </tr>
       
       
       <tr id="toc-row-32">
-        <th><a href="#slide32">Exercise - Create a repository on github</a></th>
+        <th><a href="#slide32">Exercise - Push to your github repo</a></th>
         <td><a href="#slide32">32</a></td>
       </tr>
       
       
       <tr id="toc-row-33">
-        <th><a href="#slide33">Pushing to a remote repository</a></th>
+        <th><a href="#slide33">Pulling Updates</a></th>
         <td><a href="#slide33">33</a></td>
       </tr>
       
       
       <tr id="toc-row-34">
-        <th><a href="#slide34">Exercise - Push to your github repo</a></th>
+        <th><a href="#slide34">Exercise - Collaboration on github</a></th>
         <td><a href="#slide34">34</a></td>
       </tr>
       
       
       <tr id="toc-row-35">
-        <th><a href="#slide35">Pulling Updates</a></th>
+        <th><a href="#slide35">Questions??</a></th>
         <td><a href="#slide35">35</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-36">
-        <th><a href="#slide36">Exercise - Collaboration on github</a></th>
-        <td><a href="#slide36">36</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-37">
-        <th><a href="#slide37">Questions??</a></th>
-        <td><a href="#slide37">37</a></td>
       </tr>
       
       

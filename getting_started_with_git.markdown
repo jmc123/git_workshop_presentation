@@ -1,69 +1,39 @@
-# Getting Started With git
+# Getting Started With Git - 02/03/2015
 
 ---
-# What is git?
-* git is a Decentralised Version Control System
-* Not necessary to have one central server
-* You can make changes to the code and commit them even if you don't have access to a central server
-* You only push these changes to other people when you want to
-* You can view the history (and compare the files at different revisions) without needing access to a central server
+# Installation
+* Click the Git.exe in your downloads folder
+* Choose the default options. Apart from...
+![setup](getting_started_with_git/images/Untitled.png)
+* Setup configuration with handout
 
 ---
-# Installing git on Linux
-On Debian based systems:
+#Clearcase vs Git
 
-`
-sudo apt-get install git
-`
-
-On RedHat based systems:
-
-`
-sudo yum install git
-`
+![setup](getting_started_with_git/images/gitvscc.png)
 
 ---
-# Configuring your git user profile
-Git must be configured so that your commits carry your information
-
-`
-git config --global user.email "johndoe@example.com"
-git config --global user.name "John Doe"
-`
-
-Pick your favourite terminal based editor (if you don't know what your favourite is then gedit is probably your best bet)
-
-Other options are vim, emacs, pico, nano...
-
-`
-git config --global core.editor gedit
-`
-
-Let's make things pretty!
-
-`
-git config --global color.ui true
-`
-
-***Note***: You can also edit the [configuration file](http://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration) directly if you wish. It is located at ~/.gitconfig
+# Differences between the two
+* Each Git clone is a replica of the central repository
+* Git has no checkin command and checkout command is not what it means in Clearcase
+* There are no view and no config specs
 
 ---
-# Exercise - Set up your profile using git config
-
+# Cloning an Existing Repository
+* Use
+`
+git clone [url]
+`
+command to copy an existing Git repository from the server.
+* This is a one time operation.
 ---
-# Creating a repository
-## [git init](http://git-scm.com/docs/git-init)
-Before you write any code you will need to create a repository
-
-`
-mkdir my-repo
-cd my-repo
-git init
-`
-
-This creates the hidden .git folder which git needs to keep track of the state of the repository.
-
-***Note***: You *normally* shouldn't have to touch these files. Doing so can corrupt your repository
+# Exercise - Clone down a repository
+* Go to https://gerrit.ericsson.se  - Ericsson's Git server
+* In the top left click Projects -> List
+* Type in `cm-sync-node` and click on the 2nd project
+* Copy the git clone command
+* In Git bash paste it in - you'll need to click on the border icon
+* cd into project
 
 ---
 # Viewing Repository Status
@@ -83,12 +53,12 @@ git status
 
 ---
 # The staging area
-* git is slightly different from most other version control systems in that it has a staging area
+* What makes Git unique is its concept of a staging area
 * The staging area is a temporary area to store your work before committing it
 * It allows you to structure your commits in a way that suits you best
 
 ## A commit lifecycle
-Locally Modified File(s) --&gt; Staging Area --&gt; Committed
+![setup](getting_started_with_git/images/git_file_stages.png)
 
 ---
 # Adding and removing files
@@ -144,9 +114,10 @@ Some useful commit options:
 * ***git log &lt;file&gt;...*** : Show commits that affected the specified file(s)
 
 ---
-# Exercise - Start a repository
-* Initialise a repository
-* Create a text file within
+# Exercise - Git Lifecycle
+## Run `git status` after each of these steps
+* From the project you cloned open up pom.xml in the editor of your choice 
+* Edit a few lines 
 * Add the file to the staging area
 * Commit the file
 * View your history
@@ -363,29 +334,6 @@ Create your own working copy of an existing repository
 * Clone the Python requests repository from github [here](https://github.com/kennethreitz/requests)
 * Find the url you need to clone it over http (bottom right of the page)
 * Clone it to your machine
-
----
-# ssh keys
-* ssh keys are a way of authenicating automatically with a server running a sshd service
-* You will need an ssh key to push changes to your github repositories
-* Creating an ssh key
-
-`
-ssh-keygen
-`
-
-* Viewing the public part of your ssh key
-
-`
-cat ~/.ssh/id_rsa.pub
-`
-
----
-# Exercise - Create a repository on github
-* Create a github account
-* Add your ssh key in the Account Setting -&gt; SSH Keys pages
-* Create a repository
-* DO NOT check the box for initialising the repo. You will be pushing the repository you created in the previous exercises
 
 ---
 # Pushing to a remote repository
