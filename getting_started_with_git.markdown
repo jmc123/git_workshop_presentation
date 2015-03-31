@@ -191,11 +191,16 @@ git reset HEAD --hard
 `
 
 ---
-# Working on multiple features at once
+# Branching
 ## [git branch](http://git-scm.com/docs/git-branch)
-* Branching allows you to will want to work on multiple seperate features at the same time
-* Both can be worked on without affecting the other
+* By default in git the main branch is named <b>master</b> 
 * Branches are pointers to revisions
+* An asterisk is used to see the current branch you're on
+
+Some useful options:
+
+* ***-v*** : See the last commit on each branch
+* ***-a*** : View all branches including remotes
 
 ![branches](getting_started_with_git/images/branches.png)
 
@@ -223,14 +228,12 @@ You can checkout a branch
 `
 git checkout <branchname>
 `
+***Note***: This command does two things
+1. Moves the HEAD pointer to the commit the branch last used
+2. Reverted the files in the working directory back to the snapshot the branch points to
 
-or specify a revision using it's sha1 commit key
+* Git keeps a special pointer called HEAD that specifies which branch you are currently on.
 
-`
-git checkout <sha1>
-`
-
-***Note***: The sha1 key can be found by using the git log command. It's the long string of hex characters
 
 ---
 # Combining branches
@@ -238,8 +241,8 @@ git checkout <sha1>
 * Use *git merge* to combine the code changes from two different branches
 
 `
-git checkout new-secret-feature
-git merge bug-fix-12345
+git checkout master
+git merge test
 `
 
 ![branches](getting_started_with_git/images/merged.png)
