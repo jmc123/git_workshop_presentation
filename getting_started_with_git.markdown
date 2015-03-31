@@ -279,90 +279,29 @@ git branch -D <branchname>
 # Exercise - Branching & Merging
 * Create a new branch in your repository called branch1
 * Check it out and commit some changes
-* Create another new branch in your repository called branch2 - ensure you create it with a start point of master
+* Checkout master and create another branch called branch2
+***Note***: Changes in your working directory will have changed
 * Check it out and commit some changes
-* Merge the two branches
-* Update your master (hint: merge master to the top most branch in your history)
+* Merge the two branches into master
 * Delete your branches
 
 ---
-# Working with remote repositories
-* So far we have looked at managing our code locally
-* This allows you to change your code and be safe in the knowledge that you can revert your changes if needs be
-* It gives you a history of the changes you made and commit messages letting you know why you made those changes (provided you write good commit messages!)
+# Git Help
+`
+git help 
+`
+<br />
+to see a list of all the common commands.
 
----
-# Working with remote repositories
-* Another main benefit of version control is that it allows you to collaborate with others
-* This is where remote repositories come in
-* You and your co-workers can each clone a repository, work on it locally, commit your changes, and then contribute your changes back to the original repository
-
----
-# Cloning an Existing Repository
-## [git clone](http://git-scm.com/docs/git-clone)
-Create your own working copy of an existing repository
-
-* Cloning over ssh
+# Git Aliases
+`
+git config --global alias.<alias> command
+`
+<br />
+For example:
+<br />
 
 `
-    git clone <username>@<host>:/path/to/repo
+git config --global alias.st status
+git config --global alias.plot 'log --oneline --graph --decorate'
 `
-
-* Cloning over http(s)
-
-`
-    git clone https://<host>/path/to/repo
-`
-
----
-# Exercise - Clone a repository from github
-* Clone the Python requests repository from github [here](https://github.com/kennethreitz/requests)
-* Find the url you need to clone it over http (bottom right of the page)
-* Clone it to your machine
-
----
-# Pushing to a remote repository
-* To push to a remote repository, you must first add an entry for the remote server
-
-`
-git remote add origin git@github.com:<username>/<reponame>.git
-`
-
-* You can then push your master branch to the remote server
-
-`
-git push -u origin master
-`
-
----
-# Exercise - Push to your github repo
-* In this exercise you will push your local repos commits to your empty github repo
-* Add the github repo as your remote origin
-* Push your local commits
-
----
-# Pulling Updates
-## [git pull](http://git-scm.com/docs/git-pull)
-* Before you attempt to push your changes, you should perform a pull to ensure there are no new commits on the remote server
-* If there are, then you should incoperate them into your local repo (and merge) before pushing
-
-`
-    git pull
-`
-
----
-# Exercise - Collaboration on github
-* Pair up with the person beside you
-* Add the other person as a collaborator on your github project
-    - In the github UI: Your project -&gt; Setting -&gt; Collorators -&gt; Add
-* Clone their repository
-* Make some changes and commit
-* Push to their repository
-* Once they've pushed to your repo, make some changes to your own local repository and commit
-* Try to push to your remote repository (hint: it should fail)
-* pull the new changes your partner has made
-* Merge and push
-
----
-# Questions??
-![questions](http://ilsmatters.files.wordpress.com/2012/04/monkey_has_a_question1.jpg)

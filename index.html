@@ -71,7 +71,7 @@
             </aside>
             
             <aside class="page_number">
-              1/33
+              1/25
             </aside>
           </footer>
         </div>
@@ -106,7 +106,7 @@
             </aside>
             
             <aside class="page_number">
-              2/33
+              2/25
             </aside>
           </footer>
         </div>
@@ -136,7 +136,7 @@
             </aside>
             
             <aside class="page_number">
-              3/33
+              3/25
             </aside>
           </footer>
         </div>
@@ -170,7 +170,7 @@
             </aside>
             
             <aside class="page_number">
-              4/33
+              4/25
             </aside>
           </footer>
         </div>
@@ -205,7 +205,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              5/33
+              5/25
             </aside>
           </footer>
         </div>
@@ -242,7 +242,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              6/33
+              6/25
             </aside>
           </footer>
         </div>
@@ -282,7 +282,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              7/33
+              7/25
             </aside>
           </footer>
         </div>
@@ -318,7 +318,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              8/33
+              8/25
             </aside>
           </footer>
         </div>
@@ -354,7 +354,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              9/33
+              9/25
             </aside>
           </footer>
         </div>
@@ -393,7 +393,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              10/33
+              10/25
             </aside>
           </footer>
         </div>
@@ -431,7 +431,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              11/33
+              11/25
             </aside>
           </footer>
         </div>
@@ -468,7 +468,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              12/33
+              12/25
             </aside>
           </footer>
         </div>
@@ -507,7 +507,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              13/33
+              13/25
             </aside>
           </footer>
         </div>
@@ -545,7 +545,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              14/33
+              14/25
             </aside>
           </footer>
         </div>
@@ -584,7 +584,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              15/33
+              15/25
             </aside>
           </footer>
         </div>
@@ -617,7 +617,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              16/33
+              16/25
             </aside>
           </footer>
         </div>
@@ -652,7 +652,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              17/33
+              17/25
             </aside>
           </footer>
         </div>
@@ -663,14 +663,19 @@ command to copy an existing Git repository from the server.</li>
         <div class="slide slide-18">
           <div class="inner">
             
-            <header><h1>Working on multiple features at once</h1></header>
+            <header><h1>Branching</h1></header>
             
             
             <section><h2><a href="http://git-scm.com/docs/git-branch">git branch</a></h2>
 <ul>
-<li>Branching allows you to will want to work on multiple seperate features at the same time</li>
-<li>Both can be worked on without affecting the other</li>
+<li>By default in git the main branch is named <b>master</b> </li>
 <li>Branches are pointers to revisions</li>
+<li>An asterisk is used to see the current branch you're on</li>
+</ul>
+<p>Some useful options:</p>
+<ul>
+<li><strong><em>-v</em></strong> : See the last commit on each branch</li>
+<li><strong><em>-a</em></strong> : View all branches including remotes</li>
 </ul>
 <p><img alt="branches" src="getting_started_with_git/images/branches.png" /></p></section>
             
@@ -688,7 +693,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              18/33
+              18/25
             </aside>
           </footer>
         </div>
@@ -725,7 +730,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              19/33
+              19/25
             </aside>
           </footer>
         </div>
@@ -742,10 +747,13 @@ command to copy an existing Git repository from the server.</li>
             <section><h2><a href="http://git-scm.com/docs/git-checkout">git checkout</a></h2>
 <p>Use <em>git checkout</em> if you would like to go to a specific revision in your repositories history</p>
 <p>You can checkout a branch</p>
-<p><code>git checkout &lt;branchname&gt;</code></p>
-<p>or specify a revision using it's sha1 commit key</p>
-<p><code>git checkout &lt;sha1&gt;</code></p>
-<p><strong><em>Note</em></strong>: The sha1 key can be found by using the git log command. It's the long string of hex characters</p></section>
+<p><code>git checkout &lt;branchname&gt;</code>
+<strong><em>Note</em></strong>: This command does two things
+1. Moves the HEAD pointer to the commit the branch last used
+2. Reverted the files in the working directory back to the snapshot the branch points to</p>
+<ul>
+<li>Git keeps a special pointer called HEAD that specifies which branch you are currently on.</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -761,7 +769,7 @@ command to copy an existing Git repository from the server.</li>
             </aside>
             
             <aside class="page_number">
-              20/33
+              20/25
             </aside>
           </footer>
         </div>
@@ -779,8 +787,8 @@ command to copy an existing Git repository from the server.</li>
 <ul>
 <li>Use <em>git merge</em> to combine the code changes from two different branches</li>
 </ul>
-<p><code>git checkout new-secret-feature
-git merge bug-fix-12345</code></p>
+<p><code>git checkout master
+git merge test</code></p>
 <p><img alt="branches" src="getting_started_with_git/images/merged.png" /></p></section>
             
           </div>
@@ -797,7 +805,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              21/33
+              21/25
             </aside>
           </footer>
         </div>
@@ -835,7 +843,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              22/33
+              22/25
             </aside>
           </footer>
         </div>
@@ -871,7 +879,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              23/33
+              23/25
             </aside>
           </footer>
         </div>
@@ -888,10 +896,10 @@ git merge bug-fix-12345</code></p>
             <section><ul>
 <li>Create a new branch in your repository called branch1</li>
 <li>Check it out and commit some changes</li>
-<li>Create another new branch in your repository called branch2 - ensure you create it with a start point of master</li>
+<li>Checkout master and create another branch called branch2
+<strong><em>Note</em></strong>: Changes in your working directory will have changed</li>
 <li>Check it out and commit some changes</li>
-<li>Merge the two branches</li>
-<li>Update your master (hint: merge master to the top most branch in your history)</li>
+<li>Merge the two branches into master</li>
 <li>Delete your branches</li>
 </ul></section>
             
@@ -909,7 +917,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              24/33
+              24/25
             </aside>
           </footer>
         </div>
@@ -920,48 +928,19 @@ git merge bug-fix-12345</code></p>
         <div class="slide slide-25">
           <div class="inner">
             
-            <header><h1>Working with remote repositories</h1></header>
+            <header><h1>Git Help</h1></header>
             
             
-            <section><ul>
-<li>So far we have looked at managing our code locally</li>
-<li>This allows you to change your code and be safe in the knowledge that you can revert your changes if needs be</li>
-<li>It gives you a history of the changes you made and commit messages letting you know why you made those changes (provided you write good commit messages!)</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="getting_started_with_git.markdown">getting_started_with_git.markdown</a>
-            </aside>
-            
-            <aside class="page_number">
-              25/33
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: getting_started_with_git.markdown -->
-      <div class="slide-wrapper">
-        <div class="slide slide-26">
-          <div class="inner">
-            
-            <header><h1>Working with remote repositories</h1></header>
-            
-            
-            <section><ul>
-<li>Another main benefit of version control is that it allows you to collaborate with others</li>
-<li>This is where remote repositories come in</li>
-<li>You and your co-workers can each clone a repository, work on it locally, commit your changes, and then contribute your changes back to the original repository</li>
-</ul></section>
+            <section><p><code>git help</code>
+<br />
+to see a list of all the common commands.</p>
+<h1>Git Aliases</h1>
+<p><code>git config --global alias.&lt;alias&gt; command</code>
+<br />
+For example:
+<br />
+<code>git config --global alias.st status
+git config --global alias.plot 'log --oneline --graph --decorate'</code></p></section>
             
           </div>
           <div class="presenter_notes">
@@ -977,259 +956,7 @@ git merge bug-fix-12345</code></p>
             </aside>
             
             <aside class="page_number">
-              26/33
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: getting_started_with_git.markdown -->
-      <div class="slide-wrapper">
-        <div class="slide slide-27">
-          <div class="inner">
-            
-            <header><h1>Cloning an Existing Repository</h1></header>
-            
-            
-            <section><h2><a href="http://git-scm.com/docs/git-clone">git clone</a></h2>
-<p>Create your own working copy of an existing repository</p>
-<ul>
-<li>Cloning over ssh</li>
-</ul>
-<p><code>git clone &lt;username&gt;@&lt;host&gt;:/path/to/repo</code></p>
-<ul>
-<li>Cloning over http(s)</li>
-</ul>
-<p><code>git clone https://&lt;host&gt;/path/to/repo</code></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="getting_started_with_git.markdown">getting_started_with_git.markdown</a>
-            </aside>
-            
-            <aside class="page_number">
-              27/33
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: getting_started_with_git.markdown -->
-      <div class="slide-wrapper">
-        <div class="slide slide-28">
-          <div class="inner">
-            
-            <header><h1>Exercise - Clone a repository from github</h1></header>
-            
-            
-            <section><ul>
-<li>Clone the Python requests repository from github <a href="https://github.com/kennethreitz/requests">here</a></li>
-<li>Find the url you need to clone it over http (bottom right of the page)</li>
-<li>Clone it to your machine</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="getting_started_with_git.markdown">getting_started_with_git.markdown</a>
-            </aside>
-            
-            <aside class="page_number">
-              28/33
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: getting_started_with_git.markdown -->
-      <div class="slide-wrapper">
-        <div class="slide slide-29">
-          <div class="inner">
-            
-            <header><h1>Pushing to a remote repository</h1></header>
-            
-            
-            <section><ul>
-<li>To push to a remote repository, you must first add an entry for the remote server</li>
-</ul>
-<p><code>git remote add origin git@github.com:&lt;username&gt;/&lt;reponame&gt;.git</code></p>
-<ul>
-<li>You can then push your master branch to the remote server</li>
-</ul>
-<p><code>git push -u origin master</code></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="getting_started_with_git.markdown">getting_started_with_git.markdown</a>
-            </aside>
-            
-            <aside class="page_number">
-              29/33
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: getting_started_with_git.markdown -->
-      <div class="slide-wrapper">
-        <div class="slide slide-30">
-          <div class="inner">
-            
-            <header><h1>Exercise - Push to your github repo</h1></header>
-            
-            
-            <section><ul>
-<li>In this exercise you will push your local repos commits to your empty github repo</li>
-<li>Add the github repo as your remote origin</li>
-<li>Push your local commits</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="getting_started_with_git.markdown">getting_started_with_git.markdown</a>
-            </aside>
-            
-            <aside class="page_number">
-              30/33
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: getting_started_with_git.markdown -->
-      <div class="slide-wrapper">
-        <div class="slide slide-31">
-          <div class="inner">
-            
-            <header><h1>Pulling Updates</h1></header>
-            
-            
-            <section><h2><a href="http://git-scm.com/docs/git-pull">git pull</a></h2>
-<ul>
-<li>Before you attempt to push your changes, you should perform a pull to ensure there are no new commits on the remote server</li>
-<li>If there are, then you should incoperate them into your local repo (and merge) before pushing</li>
-</ul>
-<p><code>git pull</code></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="getting_started_with_git.markdown">getting_started_with_git.markdown</a>
-            </aside>
-            
-            <aside class="page_number">
-              31/33
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: getting_started_with_git.markdown -->
-      <div class="slide-wrapper">
-        <div class="slide slide-32">
-          <div class="inner">
-            
-            <header><h1>Exercise - Collaboration on github</h1></header>
-            
-            
-            <section><ul>
-<li>Pair up with the person beside you</li>
-<li>Add the other person as a collaborator on your github project<ul>
-<li>In the github UI: Your project -&gt; Setting -&gt; Collorators -&gt; Add</li>
-</ul>
-</li>
-<li>Clone their repository</li>
-<li>Make some changes and commit</li>
-<li>Push to their repository</li>
-<li>Once they've pushed to your repo, make some changes to your own local repository and commit</li>
-<li>Try to push to your remote repository (hint: it should fail)</li>
-<li>pull the new changes your partner has made</li>
-<li>Merge and push</li>
-</ul></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="getting_started_with_git.markdown">getting_started_with_git.markdown</a>
-            </aside>
-            
-            <aside class="page_number">
-              32/33
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: getting_started_with_git.markdown -->
-      <div class="slide-wrapper">
-        <div class="slide slide-33">
-          <div class="inner">
-            
-            <header><h1>Questions??</h1></header>
-            
-            
-            <section><p><img alt="questions" src="http://ilsmatters.files.wordpress.com/2012/04/monkey_has_a_question1.jpg" /></p></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Presenter Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="getting_started_with_git.markdown">getting_started_with_git.markdown</a>
-            </aside>
-            
-            <aside class="page_number">
-              33/33
+              25/25
             </aside>
           </footer>
         </div>
@@ -1346,7 +1073,7 @@ git merge bug-fix-12345</code></p>
       
       
       <tr id="toc-row-18">
-        <th><a href="#slide18">Working on multiple features at once</a></th>
+        <th><a href="#slide18">Branching</a></th>
         <td><a href="#slide18">18</a></td>
       </tr>
       
@@ -1388,56 +1115,8 @@ git merge bug-fix-12345</code></p>
       
       
       <tr id="toc-row-25">
-        <th><a href="#slide25">Working with remote repositories</a></th>
+        <th><a href="#slide25">Git Help</a></th>
         <td><a href="#slide25">25</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-26">
-        <th><a href="#slide26">Working with remote repositories</a></th>
-        <td><a href="#slide26">26</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-27">
-        <th><a href="#slide27">Cloning an Existing Repository</a></th>
-        <td><a href="#slide27">27</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-28">
-        <th><a href="#slide28">Exercise - Clone a repository from github</a></th>
-        <td><a href="#slide28">28</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-29">
-        <th><a href="#slide29">Pushing to a remote repository</a></th>
-        <td><a href="#slide29">29</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-30">
-        <th><a href="#slide30">Exercise - Push to your github repo</a></th>
-        <td><a href="#slide30">30</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-31">
-        <th><a href="#slide31">Pulling Updates</a></th>
-        <td><a href="#slide31">31</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-32">
-        <th><a href="#slide32">Exercise - Collaboration on github</a></th>
-        <td><a href="#slide32">32</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-33">
-        <th><a href="#slide33">Questions??</a></th>
-        <td><a href="#slide33">33</a></td>
       </tr>
       
       
