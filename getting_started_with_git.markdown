@@ -1,4 +1,4 @@
-# Getting Started With Git - 02/03/2015
+# Getting Started With Git - 02/04/2015
 
 ---
 # Installation
@@ -293,7 +293,7 @@ git help
 <br />
 to see a list of all the common commands.
 
-# Git Aliases
+<h1>Git Aliases</h1>
 `
 git config --global alias.<alias> command
 `
