@@ -5,7 +5,7 @@
 * Click the Git.exe in your downloads folder
 * Choose the default options. Apart from...
 ![setup](getting_started_with_git/images/Untitled.png)
-* Setup configuration with handout
+* Setup configuration using the  handout
 
 ---
 #Clearcase vs Git
@@ -226,8 +226,9 @@ Use *git checkout* if you would like to go to a specific revision in your reposi
 You can checkout a branch
 
 `
-git checkout <branchname> <br />
+git checkout <branchname>
 `
+<br />
 ***Note***: This command does two things <br />
 1. Moves the HEAD pointer to the commit the branch last used <br />
 2. Reverted the files in the working directory back to the snapshot the branch points to
