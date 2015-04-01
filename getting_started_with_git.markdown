@@ -226,10 +226,10 @@ Use *git checkout* if you would like to go to a specific revision in your reposi
 You can checkout a branch
 
 `
-git checkout <branchname>
+git checkout <branchname> <br />
 `
-***Note***: This command does two things
-1. Moves the HEAD pointer to the commit the branch last used
+***Note***: This command does two things <br />
+1. Moves the HEAD pointer to the commit the branch last used <br />
 2. Reverted the files in the working directory back to the snapshot the branch points to
 
 * Git keeps a special pointer called HEAD that specifies which branch you are currently on.
@@ -279,7 +279,7 @@ git branch -D <branchname>
 # Exercise - Branching & Merging
 * Create a new branch in your repository called branch1
 * Check it out and commit some changes
-* Checkout master and create another branch called branch2
+* Checkout master and create another branch called branch2 <br />
 ***Note***: Changes in your working directory will have changed
 * Check it out and commit some changes
 * Merge the two branches into master
