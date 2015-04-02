@@ -107,7 +107,7 @@ Use git log to view the commits in a repository
 git log
 `
 
-Some useful commit options:
+Some useful log options:
 
 * ***-&lt;number&gt; | -n &lt;number&gt;*** : Limit the number of commits to list
 * ***--graph*** : A text based graph
